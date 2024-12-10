@@ -19,7 +19,7 @@ const Fetchpatch = () => {
   const [id, setid] = useState();
 
   async function getApiData() {
-    let result = await fetch('http://10.0.2.2:3000/users');
+    let result = await fetch(' http://localhost:3000/users');
     result = await result.json();
     setdata(result);
     //  console.log(result)
@@ -31,7 +31,7 @@ const Fetchpatch = () => {
 
   async function updateapiusingPatch() {
     // console.warn(name,id)
-    let result = await fetch(`http://10.0.2.2:3000/users/${id}`, {
+    let result = await fetch(` http://localhost:3000/users/${id}`, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
